@@ -1,0 +1,59 @@
+{
+    "pets": [
+      {
+        "id": 1,
+        "name": "Ben",
+        "species": "Dog",
+        "breed": "Saint Bernard",
+        "age": 7,
+        "gender": "Male",
+        "size": "Large",
+        "description": "Friendly and playful, loves to fetch.",
+        "image": "Ben.avif"
+      },
+      {
+        "id": 2,
+        "name": "Charlie",
+        "species": "Dog",
+        "breed": "Golden retriever",
+        "age": 5,
+        "gender": "Male",
+        "size": "Large",
+        "description": "Curious and affectionate, easy to train.",
+        "image": "charlie.avif"
+      },
+      {
+        "id": 3,
+        "name": "Kitty",
+        "species": "Cat",
+        "breed": "Calico",
+        "age": 3,
+        "gender": "Male",
+        "size": "Medium",
+        "description": "Intelligent and friendly, loves climbing.",
+        "image": "kitty.avif"
+      },
+      {
+        "id": 4,
+        "name": "Luna",
+        "species": "Cat",
+        "breed": "Maine Coon",
+        "age": 3,
+        "gender": "Female",
+        "size": "Large",
+        "description": "Gentle and playful, loves to be petted.",
+        "image": "luna.avif"
+      },
+      {
+        "id": 5,
+        "name": "Rex",
+        "species": "Cat",
+        "breed": "Manx Cat",
+        "age": 4,
+        "gender": "Female",
+        "size": "Medium",
+        "description": "Gentle and playful, loves to be petted.",
+        "image": "Rex.avif"
+      }
+    ]
+}
