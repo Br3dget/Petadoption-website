@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const confirmAdopt = confirm('Are you sure you want to adopt this pet?');
         if (confirmAdopt) {
             alert('Congratulations! You have adopted a pet.');
-            // Here you can add further actions like updating a database or UI
+            
         }
     });
 
@@ -43,5 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
 
    
