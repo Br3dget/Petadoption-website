@@ -1,12 +1,12 @@
 # Pet Adoption Website
-This project is a simple pet adoption website built using HTML,CSS and Javascript. It will display available pets for adoption and allows users to adopt a pet.
+This project is a simple pet adoption website built using HTML,CSS and Javascript. It will display available pets for adoption and allows users to view available pets, adopt them, and see adopted pets all within one page.
 
 ## Features
-Navigation Bar; Easy navigation through different sections of the website.
-Pet Gallery; Display of pets available for adoption with images.
-Interactive Buttons; Buttons to view cats and dogs and to show interest in adoption.
-Event Listeners; Interactive elements using JavaScript event listeners.
-
+Navigation Bar: Navigate between different sections like Home, About, Services, Booking, and Contact.
+Home Section: Display available pets for adoption with their images.
+Adopt Pets: Users can select and adopt pets, and the adopted pets will be displayed in a dedicated section.
+Interactive Buttons: Buttons for adopting pets and viewing all available cats and dogs.
+Single Page Application: All interactions and content updates happen on a single page.
 
 ## Project Structure 
 The project consists of three main files:
@@ -32,24 +32,29 @@ json-server --watch db.json
 Navigate to http://localhost:3000/
 
 ## Usage 
-1. Homepage: The homepage displays a navigation bar and a gallery of pets available for adoption.
-2. Adopt Button: Click the "ADOPT" button to show your interest in adopting a pet.
-3. Cats & Dogs Button: Click the "Cats & Dogs" button to see a message showing all available cats and dogs.
-4. Pet Images: Click on any pet image to see the pet's name in an alert.
+1. Open index.html in a web browser.
+2. Navigate using the Navbar: Click on HOME, ABOUT, SERVICES, BOOKING, or CONTACT to navigate between sections.
+3. Adopt a Pet:
+Click on a pet image to select it.
+Click the "ADOPT" button to confirm the adoption.
+The adopted pet will appear in the "Adopted Pets" section.
+5.View All Cats & Dogs: Click the "Cats & Dogs" button to see a message listing all available pets.
 
 ## Code Explanation
 ## HTML Structure
-The HTML file contains the structure of the web page, including the navigation bar, buttons, and pet images.
-It links to an external CSS file for styling and a JavaScript file for interactivity.
+Provides the basic structure and content for the web application.
+Includes a navigation bar, a home section with available pets, and sections for about, services, booking, and contact.
+The home section has buttons for adopting pets and viewing all cats and dogs, and it displays pets available for adoption.
+
+## CSS
+1. Styles the entire web application, including the navigation bar, buttons, pet images, and the layout.
+2. Uses Flexbox for the layout and provides hover effects for pet images.
 
 ## JavaScript
-The JavaScript file includes three main event listeners:
-
-1. Adopt Button: Shows an alert when the adopt button is clicked.
-2. Cats & Dogs Button: Shows an alert with a message when the button is clicked.
-3. Pet Images: Each pet image has an event listener that shows an alert with the pet's name when clicked.
-An array iteration using the forEach method logs the names of the pets available for adoption.
-
+Adds interactivity to the web application.
+Listens for the DOMContentLoaded event to ensure the DOM is fully loaded before executing the script.
+Handles pet selection, adoption confirmation, and displays the adopted pets.
+Manages the navigation between different sections without reloading the page.
 
 ## Example of Javascript Code
 document.addEventListener('DOMContentLoaded', () => {
