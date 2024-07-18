@@ -1,30 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PET ADOPTION WEBSITE </title>
-    <link rel="style css" href="css/style.css">
-
+    <title>Pet Adoption Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Pet Adoption</h1>
-    </header>
-    <main>
-        <section id="available pets">
-            <h2>Available Pets</h2>
-            <div class="Pet List" id="Pet List">
-
+    <div class="wrapper">
+        <nav class="navbar">
+            <ul>
+                <li><a class="active" href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="#">BOOKING</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="center">
+            <h1>Find your new best friend</h1>
+            <h2>Pets Available for Adoption</h2>
+            <div class="buttons">
+                <button id="adoptBtn">ADOPT</button>
+                <button id="catsDogsBtn" class="btn">Cats & Dogs</button>
             </div>
-        </section>
-        <section id="adopted pets">
-            <h2>Adopted Pets</h2>
-            <div class="Pet LIst" id="adopted pet list">
-
+            <div class="pets-available">
+                <div class="pet">
+                    <img src="images/Ben.avif" alt="Ben"/>
+                </div>
+                <div class="pet">
+                    <img src="images/Charlie.avif" alt="Charlie"/>
+                </div>
+                <div class="pet">
+                    <img src="images/Kitty.avif" alt="Kitty"/>
+                </div>
+                <div class="pet">
+                    <img src="images/Luna.avif" alt="Luna"/>
+                </div>
+                <div class="pet">
+                    <img src="images/Rex.avif" alt="Rex"/>
+                </div>
             </div>
-        </section>
-    </main>
-    <script src="script.js"></script>
+        </div>
+    </div>
 </body>
 </html>
