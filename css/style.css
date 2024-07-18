@@ -108,3 +108,29 @@
     transform: scale(1.1);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
+
+.selected {
+    border: 2px solid blueviolet;
+}
+
+#adopted-pets {
+    margin-top: 20px;
+}
+
+.adopted-pets-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.adopted-pet {
+    margin: 10px;
+}
+
+.adopted-pet img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}

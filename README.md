@@ -56,24 +56,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const adoptBtn = document.getElementById('adoptBtn');
     const catsDogsBtn = document.getElementById('catsDogsBtn');
     const petImages = document.querySelectorAll('.pet img');
+    let selectedPet = null;
+
+    petImages.forEach((img) => {
+        img.addEventListener('click', (e) => {
+            petImages.forEach(image => image.classList.remove('selected'));
+            e.target.classList.add('selected');
+            selectedPet = e.target;
+        });
+    });
 
     adoptBtn.addEventListener('click', () => {
-        const confirmAdopt = confirm('Are you sure you want to adopt this pet?');
-        if (confirmAdopt) {
-            alert('Congratulations! You have adopted a pet.');
-            
+        if (selectedPet) {
+            const confirmAdopt = confirm(`Are you sure you want to adopt ${selectedPet.alt}?`);
+            if (confirmAdopt) {
+                alert(`Congratulations! You have adopted ${selectedPet.alt}.`);
+                adoptPet(selectedPet);
+                selectedPet.classList.remove('selected');
+                selectedPet = null;
+            }
+        } else {
+            alert('Please select a pet to adopt.');
         }
     });
 
     catsDogsBtn.addEventListener('click', () => {
         alert('Here are all our cats and dogs available for adoption!');
-    });
-
-    petImages.forEach((img) => {
-        img.addEventListener('click', (e) => {
-            const petName = e.target.alt;
-            alert(`You clicked on ${petName}!`);
-        });
     });
 
     const links = document.querySelectorAll('.navbar ul li a');
@@ -96,7 +104,19 @@ document.addEventListener('DOMContentLoaded', () => {
             e.target.classList.add('active');
         });
     });
+
+    function adoptPet(pet) {
+        const adoptedPetsList = document.querySelector('.adopted-pets-list');
+        const petContainer = document.createElement('div');
+        petContainer.classList.add('adopted-pet');
+        const petImage = document.createElement('img');
+        petImage.src = pet.src;
+        petImage.alt = pet.alt;
+        petContainer.appendChild(petImage);
+        adoptedPetsList.appendChild(petContainer);
+    }
 });
+
 
 ## Author
 This project was written by Bridget Njoki.
