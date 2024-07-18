@@ -4,7 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const petImages = document.querySelectorAll('.pet img');
 
     adoptBtn.addEventListener('click', () => {
-        alert('Thank you for your interest in adopting a pet!');
+        const confirmAdopt = confirm('Are you sure you want to adopt this pet?');
+        if (confirmAdopt) {
+            alert('Congratulations! You have adopted a pet.');
+            // Here you can add further actions like updating a database or UI
+        }
     });
 
     catsDogsBtn.addEventListener('click', () => {
@@ -18,7 +22,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    const petNames = Array.from(petImages).map(img => img.alt);
-    console.log('Available pets for adoption:');
-    petNames.forEach(name => console.log(name));
+    const links = document.querySelectorAll('.navbar ul li a');
+    const sections = document.querySelectorAll('.content > div');
+
+    links.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetSection = e.target.getAttribute('data-section');
+            
+            sections.forEach(section => {
+                if (section.id === targetSection) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+
+            links.forEach(link => link.classList.remove('active'));
+            e.target.classList.add('active');
+        });
+    });
 });
+
+   
